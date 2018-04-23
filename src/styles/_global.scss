@@ -1,0 +1,144 @@
+body {
+    background-color: #19062cda;
+    background-image: url('../images/assets/background1.jpg');
+    background-blend-mode: saturation;
+    font-size: 14px;
+}
+
+// Defining all fonts family default
+* {
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: white;
+}
+
+// Headers
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+// base grid size
+.baseGrid {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+
+.loading{
+    height: 200px;
+    width: 200px;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+////////////
+
+.transition-wrapper {
+    position: relative;
+    z-index: 1;
+    .transition-item {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+  .detail-page {
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100vh;
+    background-color: #03a9f4;
+    transition: transform 0.5s, opacity 0.5s;
+  
+    &.transition-appear {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    &.transition-appear.transition-appear-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    &.transition-leave {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    &.transition-leave.transition-leave-active {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  .list-page {
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100vh;
+    background-color: #fff;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translate3d(0, 0, 0);
+  
+    &.transition-appear {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    &.transition-appear.transition-appear-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    &.transition-leave {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    &.transition-leave.transition-leave-active {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+////////////
+@media (min-width:426px){
+    h1 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
+}
